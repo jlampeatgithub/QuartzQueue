@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Tasks>
+  <Task Name="FromMSMQ" CheckMS="1500">
+    <Source Type="MSMQ" Path=".\private$\ToAFolder"/>
+    <Destination Type="Folder" Path="D:\TEMP\qq\FromMSMQ" NameTemplate="[GUID].xml"/>
+  </Task>
+  <Task Name="ToMSMQ" CheckMS="2500">
+    <Source Type="Folder" Path="D:\TEMP\qq\ToMSMQ"/>
+    <Destination Type="MSMQ" Path=".\private$\FromAFolder" NameTemplate="[GUID]"/>
+  </Task>
+</Tasks>
